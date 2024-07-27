@@ -4,8 +4,7 @@ USE alx_book_store;
 -- Create the 'authors' table
 CREATE TABLE IF NOT EXISTS authors (
     author_id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
+    author_name VARCHAR(100) NOT NULL,
     birthdate DATE,
     nationality VARCHAR(50)
 );
