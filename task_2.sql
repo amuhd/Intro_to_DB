@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS Order_Details (
     book_id INT,
     quantity INT,
     price DECIMAL(10, 2),
+    quantity DOUBLE (order_id, book_id)
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
