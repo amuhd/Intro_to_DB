@@ -1,23 +1,14 @@
 -- Use the alx_book_store database
 USE alx_book_store;
 
--- Create the 'authors' table
-CREATE TABLE IF NOT EXISTS authors (
-    author_id INT AUTO_INCREMENT PRIMARY KEY,
-    author_name VARCHAR(100) NOT NULL,
-    birthdate DATE,
-    nationality VARCHAR(50)
-);
-
 -- Create the 'books' table
 CREATE TABLE IF NOT EXISTS books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
-    author_id INT,
+    author_name VARCHAR(100) NOT NULL,
     published_date DATE,
     isbn VARCHAR(20) UNIQUE,
-    price DECIMAL(10, 2),
-    FOREIGN KEY (author_id) REFERENCES authors(author_id)
+    price DECIMAL(10, 2)
 );
 
 -- Create the 'customers' table
